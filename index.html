@@ -1,107 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form and Display</title>
+    <title>เอกสารแปล</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body onload="updateDisplay()">
+<body>
     <div class="container">
-        <div class="display-container">
-            <div class="display" id="display">
-                <canvas id="canvas" width="793" height="1122"></canvas>
-                <button onclick="downloadImage()">คัดลอกเป็นรูปภาพ</button>
-            </div>
-        </div>
-        <div class="form-container">
-            <h1>ทำเอกสาร</h1>
+        <h1>เอกสารแปล</h1>
+        <form id="paymentForm">
             <h2>สมุดด้านหน้า</h2>
-            <div class="form">
-                 <label for="houseCode">รหัสประจำบ้าน (House Code No)</label>
-                 <input type="text" id="houseCode" name="houseCode" placeholder="รหัสประจำบ้าน" oninput="updateDisplay()">
+            <label for="HouseCodeNo">รหัสประจำบ้าน (House Code No)</label>
+            <input type="text" id="HouseCodeNo" placeholder="รหัสประจำบ้าน" style="color:#828282">
+            
+            <label for="RegistrationOffice">สำนักทะเบียน (Registration Office)</label>
+            <input type="text" id="RegistrationOffice" placeholder="สำนักทะเบียน" style="color:#828282">
+            
+            <label for="Addresslist">รายการที่อยู่ (Address list)</label>
+            <input type="text" id="Addresslist" placeholder="รายการที่อยู่" style="color:#828282">
+            
+            <label for="NameofHouse">ชื่อบ้าน(Name of House)</label>
+            <input type="text" id="NameofHouse" placeholder="ชื่อบ้าน" style="color:#828282">
 
-                 <label for="RegistrationOffice">สำนักทะเบียน (Registration Office)</label>
-                 <input type="text" id="RegistrationOffice" name="houseCode" placeholder="สำนักทะเบียน" oninput="updateDisplay()">
+            <label for="NameofVillage">ชื่อหมู่บ้าน(Name of Village)</label>
+            <input type="text" id="NameofVillage" placeholder="ชื่อหมู่บ้าน" style="color:#828282">
 
-                <label for="addressList">รายการที่อยู่ (Address list)</label>
-                <input type="text" id="addressList" name="addressList" placeholder="รายการที่อยู่" oninput="updateDisplay()">
-
-                <label for="nameOfVillage">ชื่อหมู่บ้าน (Name of Village)</label>
-                <input type="text" id="nameOfVillage" name="nameOfVillage" placeholder="ชื่อหมู่บ้าน" oninput="updateDisplay()">
-
-                <label for="nameOfHouse">ชื่อบ้าน (Name of House)</label>
-                <input type="text" id="nameOfHouse" name="nameOfHouse" placeholder="ชื่อบ้าน"oninput="updateDisplay()">
-
-                <label for="typeOfHouse">ประเภทบ้าน (Type of House)</label>
-                <input type="text" id="typeOfHouse" name="typeOfHouse" placeholder="ประเภทบ้าน" oninput="updateDisplay()">
-
-                <label for="descriptionOfHouse">ลักษณะบ้าน (Description of House)</label>
-                <input type="text" id="descriptionOfHouse" name="descriptionOfHouse" placeholder="ลักษณะบ้าน" oninput="updateDisplay()">
-
-                <label for="houseNumberDate">วันเดือนปีที่กำหนดบ้านเลขที่ (House number)</label>
-                <input type="text" id="houseNumberDate" name="houseNumberDate" placeholder="วันเดือนปีที่กำหนดบ้านเลขที่" oninput="updateDisplay()">
-
-                <label for="registrarName">ชื่อนายทะเบียน</label>
-                <input type="text" id="registrarName" name="registrarName" oninput="updateDisplay()">
-
-                <label for="registrationDate">วันเดือนปีที่พิมพ์ทะเบียนบ้าน</label>
-                <input type="text" id="registrationDate" name="registrationDate" oninput="updateDisplay()">
+            <label for="TypeofHouse">ประเภทบ้าน(Type of House)</label>
+            <input type="text" id="TypeofHouse" placeholder="ประเภทบ้าน" style="color:#828282">
+            
+             <label for="DescriptionofHouse">ลักษณะบ้าน(Description of House)</label>
+             <input type="text" id="DescriptionofHouse" placeholder="ลักษณะบ้าน" style="color:#828282">
+            
+             <label for="Housenumber">วันเดือนปีที่กำหนดบ้านเลขที่(House number)</label>
+             <input type="text" id="Housenumber" placeholder="วันเดือนปีที่กำหนดบ้านเลขที่" style="color:#828282">
+             
+             <label for="Signed">ชื่อนายทะเบียน</label>
+             <input type="text" id="Signed" placeholder="ชื่อนายทะเบียน" style="color:#828282">
+            
+             <label for="RegistrationPrinting">วันเดือนปีที่พิมพ์ทะเบียนบ้าน<br>(Date of House Registration Printing)</label></label>
+             <input type="text" id="RegistrationPrinting" placeholder="วันเดือนปีที่พิมพ์ทะเบียนบ้าน" style="color:#828282">
+            
             
             <h2>สมุดด้านหลัง</h2>
-                <label for="bookNo">ลำดับที่ (Book No)</label>
-                <input type="text" id="bookNo" name="bookNo" oninput="updateDisplay()">
+            <label for="BookNo">ลำดับที่ (Book No)</label>
+            <input type="text" id="BookNo" placeholder="ลำดับที่" style="color:#828282">
+            
+            <label for="HouseCodeNo1">รหัสประจำบ้าน(House Code No)</label>
+            <input type="text" id="HouseCodeNo1" placeholder="รหัสประจำบ้าน" style="color:#828282">
+            
+            <label for="Name">ชื่อ (Name)</label>
+            <input type="text" id="Name" placeholder="ชื่อ" style="color:#828282">
+            
+            <label for="Nationality">สัญชาติ(Nationality)</label>
+            <input type="text" id="Nationality" value="Thai" style="color:#d90909">
 
-                <label for="houseCodeBack">รหัสประจำบ้าน (House Code No)</label>
-                <input type="text" id="houseCodeBack" name="houseCodeBack" oninput="updateDisplay()">
+            <label for="Sex"> เพศ(Sex)</label>
+            <input type="text" id="Sex" placeholder="เพศ" style="color:#828282">
 
-                <label for="name">ชื่อ (Name)</label>
-                <input type="text" id="name" name="name" oninput="updateDisplay()">
+            <label for="Identification">เลขบัตร(Identification)</label>
+            <input type="text" id="Identification" placeholder="เลขบัตรประชาชน" style="color:#828282">
+            
+             <label for="Status">สถานภาพ(Status)</label>
+             <input type="text" id="Status" placeholder="สถานภาพ" style="color:#828282">
+            
+             <label for="Dateofbirth">เกิดเมื่อ(Date of birth)</label>
+             <input type="text" id="Dateofbirth" placeholder="เกิดเมื่อ" style="color:#828282">
+            
+             <label for="Mother">ชื่อมารดา(Mother)</label>
+             <input type="text" id="Mother" placeholder="ชื่อมารดา" style="color:#828282">
+            
+             <label for="Identification1">เลขประจำตัวมารดา(Identification1)</label>
+             <input type="text" id="Identification1" placeholder="เลขประจำตัวมารดา" style="color:#828282">
+            
+             <label for="Nationality1">สัญชาติ(Nationality1)</label>
+             <input type="text" id="Nationality1" value="Thai"  style="color:#d90909">
+            
+             <label for="Father2">ชื่อบิดา (Father)</label>
+             <input type="text" id="Father" placeholder="ชื่อบิดา" style="color:#828282">
+            
+             <label for="Identification2">เลขประจำตัวบิดา(Identification2)</label>
+             <input type="text" id="Identification2" placeholder="เลขประจำตัวบิดา" style="color:#828282">
+            
+             <label for="Nationality2">สัญชาติ(Nationality2)</label>
+             <input type="text" id="Nationality2" value="Thai" style="color:#d90909">
+            
+             <label for="TransferredFrom">มาจาก(Transferred From)</label>
+             <input type="text" id="TransferredFrom" placeholder="มาจาก" style="color:#828282">
+            
+             <label for="Signed1">นายทะเบียน(Signed1)</label>
+             <input type="text" id="Signed1" placeholder="นายทะเบียน" style="color:#828282">
+            
+             <label for="certifiedcorrecttranslation">บริษัท(certified correct translation)</label>
+             <input type="text" id="certifiedcorrecttranslation" placeholder="บริษัท" style="color:#828282">
+            
 
-                <label for="nationality">สัญชาติ (Nationality)</label>
-                <input type="text" id="nationality" name="nationality" oninput="updateDisplay()">
-
-                <label for="sex">เพศ (Sex)</label>
-                <input type="text" id="sex" name="sex" oninput="updateDisplay()">
-
-                <label for="identification">เลขบัตร (Identification)</label>
-                <input type="text" id="identification" name="identification" oninput="updateDisplay()">
-
-                <label for="status">สถานภาพ (Status)</label>
-                <input type="text" id="status" name="status" oninput="updateDisplay()">
-
-                <label for="dob">เกิดเมื่อ (Date of birth)</label>
-                <input type="text" id="dob" name="dob" oninput="updateDisplay()">
-
-                <label for="mother">ชื่อมารดา (Mother)</label>
-                <input type="text" id="mother" name="mother" oninput="updateDisplay()">
-
-                <label for="identification1">เลขประจำตัวมารดา (Identification1)</label>
-                <input type="text" id="identification1" name="identification1" oninput="updateDisplay()">
-
-                <label for="nationality1">สัญชาติ (Nationality1)</label>
-                <input type="text" id="nationality1" name="nationality1" oninput="updateDisplay()">
-
-                <label for="father">ชื่อบิดา (Father)</label>
-                <input type="text" id="father" name="father" oninput="updateDisplay()">
-
-                <label for="identification2">เลขประจำตัวบิดา (Identification2)</label>
-                <input type="text" id="identification2" name="identification2" oninput="updateDisplay()">
-
-                <label for="nationality2">สัญชาติ (Nationality2)</label>
-                <input type="text" id="nationality2" name="nationality2" oninput="updateDisplay()">
-
-                <label for="transferredFrom">มาจาก (Transferred From)</label>
-                <input type="text" id="transferredFrom" name="transferredFrom" oninput="updateDisplay()">
-
-                <label for="signed1">นายทะเบียน (Signed1)</label>
-                <input type="text" id="signed1" name="signed1" oninput="updateDisplay()">
-
-                <label for="certified">บริษัท (certified correct translation)</label>
-                <input type="text" id="certified" name="certified" oninput="updateDisplay()">
-            </div>
-        </div>
+            <button type="button" id="saveImage">Save image</button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
